@@ -7,7 +7,7 @@ class Router extends Component {
     super (props);
 
     this.state = {
-      routes: ['Москва, ул. Арбат', 'Москва, ул. Мясницкая'],
+      routes: [],
     };
 
     this.addPoint = this.addPoint.bind(this);
@@ -64,7 +64,7 @@ class Router extends Component {
         </div>
         <div className="col-8">
           <RouteMap
-            routes={this.getRoutes()}
+            points={this.getRoutes()}
           />
         </div>
       </div>
