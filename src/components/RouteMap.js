@@ -22,7 +22,9 @@ class RouteMap extends Component {
     const that = this;
 
     let map;
-    this.state.YMaps.ready(init);
+    if (this.state.YMaps) {
+      this.state.YMaps.ready(init);
+    }
 
     function init () {
       map = new that.state.YMaps.Map('map', {
